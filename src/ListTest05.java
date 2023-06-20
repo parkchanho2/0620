@@ -18,12 +18,25 @@ public class ListTest05 {
 		System.out.println();
 		
 		double findData = 6.1;
-		int index = ve.indexOf(findData);
+		int index = ve.indexOf(findData); // 주어진 자료에 해당하는 인덱스 주소번호 반환 . 첫주소번호는 0부터 시작
 		
 		if(index != -1) {
 			System.out.println("\n검색 성공: " + index);
 		}else {
 			System.out.println("\n검색 실패: " + index);
 		}
+		
+		double delData = 42.3;
+		if(ve.contains(delData)) {
+			ve.remove(delData);
+			System.out.println("\n삭제완료");
+		}
+		System.out.println("\n>> 삭제후 벡터 원소값 출력 <<");
+		System.out.println("===================================");
+		
+		for(int i = 0; i < ve.size(); i++) {
+			System.out.print(" " + ve.get(i));
+		}
+		System.out.println("\n=================================");
 	}
 }
